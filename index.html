@@ -4,29 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Web Challenge</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        #flag {
-            display: none;
-            margin-top: 20px;
-            font-size: 18px;
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -37,32 +15,6 @@
         <p id="flag"></p>
     </div>
 
-    <script>
-        async function checkCredentials() {
-            try {
-                // Fetch credentials
-                const credsResponse = await fetch('credentials.json');
-                const credentials = await credsResponse.json();
-                
-                const enteredUsername = document.getElementById('username').value;
-                const enteredPassword = document.getElementById('password').value;
-
-                // Validate credentials
-                if (enteredUsername === credentials.username && enteredPassword === credentials.password) {
-                    // Fetch and display flag
-                    const flagResponse = await fetch('flag.txt');
-                    const flag = await flagResponse.text();
-                    document.getElementById('flag').innerText = flag;
-                    document.getElementById('flag').style.display = 'block';
-                } else {
-                    alert('Incorrect username or password! Try again.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred. Please try again later.');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
