@@ -1,0 +1,3 @@
+# Ignore flag.txt and other sensitive files
+flag.txt
+*.log
