@@ -1,6 +1,6 @@
-const validUsername = 'correct_username';
-const validPassword = 'correct_password';
-const encodedFlag = 'cm9vdEBsb2NhbGhvc3R7VGhlX3dlYl9jaGFsbF9pc19lYXN5fQ=='; // Base64 encoded flag
+const validUsername = 'root';
+const validPassword = 'Helloworld';
+const encodedFlag = 'cm9vdEBsb2NhbGhvc3R7VGhlX3dlYl9jaGFsbF9pc19lYXN5fQ=='; 
 
 function checkCredentials() {
     const username = document.getElementById('username').value;
