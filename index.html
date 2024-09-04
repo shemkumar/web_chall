@@ -1,39 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>Login template</title>
-  </head>
-
-  <body>
-    <div class="limiter">
-      <div class="containter">
-        <div class="wraper">
-          <form class="validate-form">
-            <span class="login-form-title p-b-26">Welcome</span>
-
-            <div class="wrap-input">
-              <input class="input" />
-              <span class="focus-input" data-placeholder="Email"></span>
-            </div>
-            <div class="wrap-input m-b-15">
-              <input class="input" />
-              <span class="focus-input" data-placeholder="Password"></span>
-            </div>
-            <button class="login-form-button">LOGIN</button>
-          </form>
-          <div class="signup-link">
-            <span>Don't have an account? <a href="#">Sign up</a></span>
-          </div>
-          <div class="switch-container">
-            <label class="switch">
-              <input class="toggle-input" type="checkbox" />
-              <span class="slider border"></span>
-            </label>
-          </div>
-        </div>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Web Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login to View the Flag</h2>
+        <input type="text" id="username" placeholder="Enter Username" /><br><br>
+        <input type="password" id="password" placeholder="Enter Password" />
+        <button onclick="checkCredentials()">Login</button>
+        <p id="flag"></p>
     </div>
-       <script src="script.js"></script>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
